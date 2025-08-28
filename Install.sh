@@ -1,11 +1,11 @@
 #!/bin/bash
-name="GG"
-domain_input="$1"
-if [[ -z "$domain_input" ]]; then
-  echo -e "${RED}[ERROR]${NC} Penggunaan: $0 <domain|random>"
-  echo -e "Contoh: Install.sh domain"
-  exit 1
-fi
+export IP=$( curl -sS icanhazip.com )
+
+# // Clear Data
+clear
+clear && clear && clear
+clear;clear;clear
+
 export DEBIAN_FRONTEND=noninteractive
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 Green="\e[92;1m"
